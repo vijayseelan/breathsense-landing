@@ -4,35 +4,31 @@ import { Star, Quotes } from 'phosphor-react';
 
 const testimonials = [
   {
-    name: 'Sarah M.',
+    name: 'Anonymous User 1',
     role: '3 months of use',
-    avatar: 'https://i.pravatar.cc/100?img=5',
     rating: 5,
-    text: "I tried everything—mints, mouthwash, even expensive toothpaste. BreathSense helped me discover my issue was actually silent reflux. The 7-day protocol changed everything.",
+    text: "I tried everything mints, mouthwash, even expensive toothpaste. BreathSense helped me discover my issue was actually silent reflux. The 7-day protocol changed everything.",
     highlight: 'silent reflux',
   },
   {
-    name: 'James K.',
+    name: 'Anonymous User 2',
     role: '6 weeks of use',
-    avatar: 'https://i.pravatar.cc/100?img=12',
     rating: 5,
-    text: "The privacy aspect sold me. Nobody wants to broadcast they're working on breath issues. Everything stays on my phone, and the AI coach feels like having a personal consultant.",
+    text: "The privacy aspect sold me. Nobody wants to broadcast they're working on breath issues. Everything stays on my phone and the AI coach feels like having a personal consultant.",
     highlight: 'privacy aspect',
   },
   {
-    name: 'Maria L.',
+    name: 'Anonymous User 3',
     role: '2 months of use',
-    avatar: 'https://i.pravatar.cc/100?img=9',
     rating: 5,
-    text: "Within 5 days of the oral protocol, my morning breath improved dramatically. The tongue scraping habit alone made a huge difference. I wish I'd found this sooner.",
+    text: "Within 5 days of the oral protocol my morning breath improved dramatically. The tongue scraping habit alone made a huge difference. I wish I'd found this sooner.",
     highlight: '5 days',
   },
   {
-    name: 'David R.',
+    name: 'Anonymous User 4',
     role: '4 months of use',
-    avatar: 'https://i.pravatar.cc/100?img=15',
     rating: 5,
-    text: "The assessment pinpointed sinus issues I didn't even know I had. The nasal irrigation protocol cleared things up and my confidence is back. Science-backed and it works.",
+    text: "The assessment pinpointed sinus issues I didn't even know I had. The nasal irrigation protocol cleared things up and my confidence is back. Science backed and it works.",
     highlight: 'sinus issues',
   },
 ];
@@ -87,13 +83,14 @@ const TestimonialsSection: React.FC = () => {
             </div>
 
             {/* Author */}
-            <div className="flex items-center gap-3 pt-5 border-t border-slate-100">
-              <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-slate-100">
-                <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" />
-              </div>
+            <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
               <div>
                 <h4 className="font-bold text-slate-900 text-sm">{testimonial.name}</h4>
                 <p className="text-xs text-slate-400">{testimonial.role}</p>
+              </div>
+              <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-100 rounded-full">
+                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                <span className="text-xs text-slate-500 font-medium">Anonymous</span>
               </div>
             </div>
           </motion.div>

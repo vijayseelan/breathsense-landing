@@ -7,15 +7,17 @@ const TermsOfUse: React.FC = () => {
     <div className="min-h-screen bg-slate-50">
       {/* Header */}
       <div className="bg-white border-b border-slate-100">
-        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center gap-4">
-          <Link to="/" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors">
-            <ArrowLeft weight="bold" className="w-5 h-5 text-slate-700" />
-          </Link>
-          <div>
-            <div className="flex items-center gap-2">
-              <div className="w-2.5 h-2.5 bg-slate-900 rounded-full"></div>
-              <span className="font-bold text-lg text-slate-900">BreathSense</span>
-            </div>
+        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Link to="/" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors">
+              <ArrowLeft weight="bold" className="w-5 h-5 text-slate-700" />
+            </Link>
+            <img 
+              src="/icon.webp" 
+              alt="BreathSense" 
+              className="w-10 h-10 rounded-full object-cover"
+            />
+            <span className="font-bold text-lg text-slate-900">BreathSense</span>
           </div>
         </div>
       </div>

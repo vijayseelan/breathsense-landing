@@ -9,7 +9,11 @@ const FooterSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 bg-slate-900 rounded-full"></div>
+            <img 
+              src="/icon.webp" 
+              alt="BreathSense" 
+              className="w-6 h-6 rounded-full object-cover"
+            />
             <span className="font-bold text-lg text-slate-900 tracking-tight">BreathSense</span>
           </div>
 

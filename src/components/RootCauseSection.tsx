@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Smiley, Fire, Wind, Bug, ArrowRight, MagnifyingGlass } from 'phosphor-react';
+import ProtocolModal from './ProtocolModal';
 
 const rootCauses = [
   {
+    id: 'oral',
     icon: <Smiley weight="fill" className="w-8 h-8" />,
     title: 'Oral',
     prevalence: '85-90%',
@@ -14,6 +16,7 @@ const rootCauses = [
     stat: '75% reduction in VSCs with proper tongue cleaning',
   },
   {
+    id: 'reflux',
     icon: <Fire weight="fill" className="w-8 h-8" />,
     title: 'Reflux / Digestive',
     prevalence: '5-8%',
@@ -24,6 +27,7 @@ const rootCauses = [
     stat: '57% of LPR cases occur without heartburn',
   },
   {
+    id: 'sinus',
     icon: <Wind weight="fill" className="w-8 h-8" />,
     title: 'Sinus / Nasal',
     prevalence: '3-5%',
@@ -34,6 +38,7 @@ const rootCauses = [
     stat: 'Mouth breathing increases bacteria by 400%',
   },
   {
+    id: 'gut',
     icon: <Bug weight="fill" className="w-8 h-8" />,
     title: 'Gut / Systemic',
     prevalence: '1-2%',
@@ -58,6 +63,8 @@ const cardVariants = {
 };
 
 const RootCauseSection: React.FC = () => {
+  const [selectedProtocol, setSelectedProtocol] = useState<string | null>(null);
+
   return (
     <section id="features" className="w-full max-w-7xl mx-auto px-6 py-24">
       {/* Section Header */}
@@ -91,6 +98,7 @@ const RootCauseSection: React.FC = () => {
           <motion.div
             key={index}
             variants={cardVariants}
+            onClick={() => setSelectedProtocol(cause.id)}
             className="group relative bg-white rounded-[24px] p-7 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden"
           >
             {/* Hover gradient overlay */}
@@ -150,6 +158,13 @@ const RootCauseSection: React.FC = () => {
           </button>
         </div>
       </motion.div>
+
+      {/* Protocol Detail Modal */}
+      <ProtocolModal
+        isOpen={selectedProtocol !== null}
+        onClose={() => setSelectedProtocol(null)}
+        protocolId={selectedProtocol}
+      />
     </section>
   );
 };

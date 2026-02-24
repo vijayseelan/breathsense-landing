@@ -7,11 +7,11 @@ const HeroSection = () => {
     <section className="w-full max-w-7xl mx-auto pt-6 px-6">
       {/* Main Hero Container with Image Background */}
       <div className="relative w-full h-[550px] rounded-[32px] overflow-hidden">
-        {/* Background Image - Using an inspiring health-focused image */}
+        {/* Background Image - Using the new custom image */}
         <div className="absolute inset-0 bg-[#e6ebdf]">
           <img 
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop" 
-            alt="Person tracking health"
+            src="/hero-image.webp" 
+            alt="Confident couple laughing"
             className="w-full h-full object-cover mix-blend-multiply"
           />
         </div>
@@ -22,7 +22,11 @@ const HeroSection = () => {
         {/* Navigation Bar */}
         <nav className="absolute top-0 w-full px-8 py-6 flex justify-between items-center z-20">
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 bg-white rounded-full"></div>
+            <img 
+              src="/icon.webp" 
+              alt="BreathSense" 
+              className="w-8 h-8 rounded-full object-cover"
+            />
             <span className="text-white font-bold text-xl tracking-tight">BreathSense</span>
           </div>
           
@@ -62,18 +66,18 @@ const HeroSection = () => {
           className="absolute bottom-16 right-8 md:right-16 bg-white p-6 rounded-[24px] shadow-2xl flex flex-col gap-3 min-w-[200px]"
         >
           <div className="text-[#D35400] text-3xl font-bold">
-            7M<span className="text-2xl">+</span>
+            700<span className="text-2xl">+</span>
           </div>
           <div className="text-sm font-medium text-slate-500">Active users</div>
           
-          <div className="flex -space-x-3 mt-1">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden relative z-10 hover:z-20 transition-transform hover:scale-110">
-                <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt={`user ${i}`} className="w-full h-full object-cover" />
-              </div>
-            ))}
-            <div className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-600 relative z-0">
-              +
+          <div className="flex items-center gap-1.5 mt-1">
+            <div className="flex items-center gap-1 px-2 py-1 bg-slate-100 rounded-full">
+              <div className="w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+              <span className="text-xs text-slate-500 font-medium">Private</span>
+            </div>
+            <div className="flex items-center gap-1 px-2 py-1 bg-slate-100 rounded-full">
+              <div className="w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+              <span className="text-xs text-slate-500 font-medium">Anonymous</span>
             </div>
           </div>
         </motion.div>
