@@ -153,9 +153,14 @@ const RootCauseSection: React.FC = () => {
           <p className="text-lg text-white/70 leading-relaxed mb-8">
             It could be silent reflux, sinus issues, or gut health. Without knowing YOUR cause, you're just guessing. BreathSense uses a comprehensive assessment to identify your specific root cause.
           </p>
-          <button className="bg-[#D35400] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#E67E22] transition-colors shadow-lg shadow-[#D35400]/30">
+          <a
+            href="https://apps.apple.com/my/app/breathsense-beat-bad-breath/id6758406211"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#D35400] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#E67E22] transition-colors shadow-lg shadow-[#D35400]/30"
+          >
             Start Your Assessment
-          </button>
+          </a>
         </div>
       </motion.div>
 

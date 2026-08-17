@@ -317,11 +317,16 @@ const ProtocolModal: React.FC<ProtocolModalProps> = ({ isOpen, onClose, protocol
 
                   {/* Download CTAs */}
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <button className={`flex items-center gap-2 ${protocol.bgColor} text-white px-8 py-3.5 rounded-full font-bold hover:opacity-90 transition-opacity shadow-lg`}>
+                    <a
+                      href="https://apps.apple.com/my/app/breathsense-beat-bad-breath/id6758406211"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 ${protocol.bgColor} text-white px-8 py-3.5 rounded-full font-bold hover:opacity-90 transition-opacity shadow-lg`}
+                    >
                       <AppleLogo weight="fill" className="w-5 h-5" />
                       Download for iOS
                       <ArrowRight weight="bold" className="w-4 h-4" />
-                    </button>
+                    </a>
                     <button className="flex items-center gap-2 bg-slate-900 text-white px-8 py-3.5 rounded-full font-bold hover:bg-slate-800 transition-colors">
                       <GooglePlayLogo weight="fill" className="w-5 h-5" />
                       Get on Android

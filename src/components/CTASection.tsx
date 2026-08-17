@@ -26,15 +26,20 @@ const CTASection: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <button className="flex items-center gap-3 bg-white text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition-colors shadow-xl shadow-black/20 group">
+            <a
+              href="https://apps.apple.com/my/app/breathsense-beat-bad-breath/id6758406211"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-white text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition-colors shadow-xl shadow-black/20 group"
+            >
               <AppleLogo weight="fill" className="w-6 h-6" />
               Download for iOS
               <ArrowRight weight="bold" className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="flex items-center gap-3 bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border border-white/30 backdrop-blur-sm">
+            </a>
+            <span className="flex items-center gap-3 bg-white/10 text-white/70 px-8 py-4 rounded-full font-bold text-lg border border-white/20 backdrop-blur-sm cursor-not-allowed">
               <GooglePlayLogo weight="fill" className="w-6 h-6" />
-              Get on Android
-            </button>
+              Android — Coming Soon
+            </span>
           </div>
 
           {/* Trust indicators */}

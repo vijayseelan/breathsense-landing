@@ -40,9 +40,14 @@ const HeroSection = () => {
             <a href="#insight" className="hover:text-white/80 transition-colors">Insight</a>
           </div>
 
-          <button className="bg-white text-slate-900 px-6 py-2.5 rounded-full font-bold shadow-sm hover:shadow-md transition-shadow">
+          <a
+            href="https://apps.apple.com/my/app/breathsense-beat-bad-breath/id6758406211"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-slate-900 px-6 py-2.5 rounded-full font-bold shadow-sm hover:shadow-md transition-shadow inline-block"
+          >
             Download App
-          </button>
+          </a>
         </nav>
 
         {/* Hero Content */}
